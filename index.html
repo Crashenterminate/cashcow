@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CashCow</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="https://res.cloudinary.com/cashcow/image/upload/f_auto,q_auto/eovwmcvzfgmxmp2ts7yl" type="image/png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV02ME0FC5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YV02ME0FC5');
+  </script>
+</head>
+<body>
+  <header>
+    <img src="https://res.cloudinary.com/cashcow/image/upload/f_auto,q_auto/itms9rohxaezxeggpf6t" alt="CashCow" draggable="false">
+    <p id="total">Total: $0.00</p>
+    <button id="config-button" onclick="openConfigurations()"><i class="fas fa-cog"></i></button>
+  </header>
+    
+  <main>
+    <form>
+      <div class="input-container">
+        <label for="amount">Cantidad:</label>
+        <input type="number" id="amount" min="0" step="0.01">
+      </div>
+        <br>
+      <div class="input-container">
+        <label for="description">Nombre:</label>
+        <input type="text" id="description" maxlength="50">
+      </div>
+        <br>
+      <button type="button" onclick="agregarCantidad()">Agregar</button>
+    </form>
+      
+    <hr>
+      
+    <ul id="cantidad-lista"></ul>
+  </main>
+
+  <footer>
+    <center><p>Todos los derechos reservados &copy; 2023 CashCow</p></center>
+  </footer>
+
+  <div id="config-modal" class="modal">
+    <div class="modal-content">
+      <h2>Configuraciones</h2>
+      <label for="currency-select">Seleccionar moneda:</label>
+      <select id="currency-select" onchange="changeCurrency()">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="AUD">AUD</option>
+        <option value="MXN">MXN</option>
+      </select>
+      <button onclick="closeConfigurations()">Guardar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    console.log('%cAdvertencia', 'color: red; font-size: 18px;');
+    console.log('Este espacio de la consola esta reservado para uso de desarrolladores. No compartas ninguna informacion de aqui ni pegues ningun codigo que te haya dado algun desconocido.');
+  </script>
+    
+</body>
+</html>
